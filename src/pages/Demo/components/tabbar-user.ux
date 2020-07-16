@@ -1,0 +1,27 @@
+<template>
+  <div class="tabbar-user">
+    <text>我是tabbar - user</text>
+  </div>
+</template>
+
+<script>
+  export default {
+    onInit() {
+      console.log('我是user页面')
+    },
+    onShow() {
+      console.log('show --- 我是user')
+    },
+    onHide() {
+      console.log('hide --- user')
+    }
+  }
+</script>
+
+<style lang="less">
+  .tabbar-user {
+    width: 100%;
+    height: 100%;
+    background-color: #666666;
+  }
+</style>

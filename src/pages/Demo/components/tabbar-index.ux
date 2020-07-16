@@ -1,0 +1,63 @@
+<template>
+  <div class="tabbar-index">
+    <text style="color: #FFFFFF;">我是tabbar - index</text>
+    <input type="button" value="详情页" @click="handleClickTo">
+    <text style="color: #FFFFFF; height: 200px;">我是tabbar - index</text>
+    <text style="color: #FFFFFF; height: 200px; background-color: #004444;">我是tabbar - index</text>
+    <div class="a">
+      <div class="a-left">
+        <text>我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边我是左边</text>
+      </div>
+      <div class="a-right">
+        <text>我是右边</text>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import router from '@system.router'
+export default {
+  onInit() {
+    console.log('我是index页面')
+  },
+  onShow() {
+    console.log('show --- 我是index')
+  },
+  onHide() {
+    console.log('hide --- 我是index')
+  },
+  onDestroy() {
+    console.log('onDestroy --- index')
+  },
+  handleClickTo() {
+    router.push({
+      uri: 'pages/DemoDetail'
+    })
+  }
+}
+</script>
+
+<style lang="less">
+  .tabbar-index {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: #000000;
+  }
+  .a {
+    flex-direction: row;
+    background-color: #006600;
+    &-left {
+      flex-wrap: nowrap;
+      flex: 1;
+      width: 90%;
+      background-color: #09BA07;
+    }
+
+    &-right {
+      width: 160px;
+      background-color: #440044;
+    }
+  }
+</style>
